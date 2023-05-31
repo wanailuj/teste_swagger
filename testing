@@ -1,0 +1,599 @@
+wanailuj
+wanailuj#5663
+
+wanailuj — 29/05/2023 09:46
+Você me dá 2hrs?
+Quer horas você se encontra com a Camila? 
+Que*
+Elias Magalhães — 29/05/2023 09:53
+Está marcado 14h
+Elias Magalhães — 29/05/2023 11:22
+Me avisa quando estiver disponível, pfv
+wanailuj — 29/05/2023 13:52
+to disponível, so esperando vcs
+agradeço a compreensão
+adiantando meu pepino, um colega do trabalho teve que dormir na minha casa e ele simplesmente fez xixi na minha cama
+aí vim pra minha mãe depois que ele saiu da minha casa
+Elias Magalhães — 29/05/2023 14:01
+Caramba
+Já vou entrar
+Manda o link para a Camila por favor
+wanailuj — 29/05/2023 14:01
+dayli
+?
+Elias Magalhães — 29/05/2023 14:02
+Pode falar com ela que estou em outra call e já entrando?
+wanailuj — 29/05/2023 14:02
+sim claro.
+Elias Magalhães — 29/05/2023 14:02
+Não. Olha na sua agenda do Google
+wanailuj — 29/05/2023 14:02
+pode terminar essa
+Elias Magalhães — 29/05/2023 14:03
+Achou?
+wanailuj — 29/05/2023 14:03
+ss
+Elias Magalhães — 29/05/2023 15:24
+Não estamos te ouvindo. Melhor sair e entrar de novo
+wanailuj — Ontem às 08:40
+Bom dia
+Elias Magalhães — Ontem às 09:10
+Bom dia
+Elias Magalhães — Ontem às 19:28
+Deixa eu te alar uma coisa
+wanailuj — Ontem às 19:29
+Fala
+Elias Magalhães — Ontem às 19:29
+Quando você se deparar com algum erro ou bug, forneça detalhes do que aconteceu
+wanailuj — Ontem às 19:29
+show
+Elias Magalhães — Ontem às 19:29
+A mensagem de erro, print, o que aconteceu
+Vi sua mensagem ali agora
+wanailuj — Ontem às 19:30
+As vezes eu penso que sou eu que não to sabendo usar direito
+Elias Magalhães — Ontem às 19:30
+Quem só fala que deu erro é usuário
+Rsrs
+wanailuj — Ontem às 19:31
+kkkkkkkkkkkkkkkkkkkkkk
+que merda
+Elias Magalhães — Ontem às 19:31
+Nós somos técnicos, então falamos tecniquês
+wanailuj — Ontem às 19:31
+obrigada pela visão, Elias.
+Elias Magalhães — Ontem às 19:31
+Neste caso, você poderia dizer: está dando erro 403
+wanailuj — Ontem às 19:32
+me senti burra agr, mas uma  burra acompanhada
+Elias Magalhães — Ontem às 19:32
+Estou dizendo isso por que jargões e comportamentos são "sinais" que passamos para colegas e clientes
+wanailuj — Ontem às 19:33
+Você tá certíssimo
+Elias Magalhães — Ontem às 19:33
+É por isso que as pessoas muitas vezes acham que eu sei de tudo
+Quando eu não sei, procuro falar como os profissionais da área
+wanailuj — Ontem às 19:34
+porque vc usa os termos certos
+Elias Magalhães — Ontem às 19:34
+Estou smepre lendo de tudo
+wanailuj — Ontem às 19:34
+isso eu venho aprendendo, sobre como o denotativo é importante
+wanailuj — Ontem às 19:34
+as coisas que vc compartilha conosco, procuro ler tbm
+Elias Magalhães — Hoje às 12:16
+Preciso que você faça uma coisa
+wanailuj — Hoje às 12:16
+Lança a braba
+Elias Magalhães — Hoje às 12:17
+Encontrar um visualizador online para Swagger
+Teste com esse arquivo
+openapi: 3.0.0
+info:
+  title: IFC Step Parser
+  description: >-
+    RESTful endpoints for managing construction projects, IFC files, and project
+    data.
+Expandir
+cde-api-swagger.json
+13 KB
+wanailuj — Hoje às 12:31
+o do google só consegue com repositórios git
+﻿
+Elias Magalhães
+Elias Magalhães#5515
+openapi: 3.0.0
+info:
+  title: IFC Step Parser
+  description: >-
+    RESTful endpoints for managing construction projects, IFC files, and project
+    data.
+  version: 1.0.0
+servers:
+  - url: http://{{baseurl}}
+tags:
+  - name: Projects
+  - name: IFC Files
+  - name: Project Data
+paths:
+  //projects:
+    get:
+      tags:
+        - Projects
+      summary: Get all projects
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Projects
+      summary: Create a new project
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Construction Project A
+                description: This is a sample construction project.
+                start_date: '2023-06-01'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //projects/{projectId}:
+    get:
+      tags:
+        - Projects
+      summary: Get a specific project
+      parameters:
+        - name: projectId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - Projects
+      summary: Update an existing project
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                end_date: '2023-12-31'
+      parameters:
+        - name: projectId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Projects
+      summary: Delete a project
+      parameters:
+        - name: projectId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //projects/{projectId}/ifc-files:
+    get:
+      tags:
+        - IFC Files
+      summary: Get all IFC files for a project
+      parameters:
+        - name: projectId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - IFC Files
+      summary: Create an IFC files for a project
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                ifc_file:
+                  type: string
+                  format: binary
+      parameters:
+        - name: projectId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //projects/{projectId}/ifc-files/stats:
+    get:
+      tags:
+        - IFC Files
+      summary: Get all IFC files stats for a project
+      parameters:
+        - name: projectId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //ifc-files/{ifcFileId}:
+    get:
+      tags:
+        - IFC Files
+      summary: Get a specific IFC file
+      parameters:
+        - name: ifcFileId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - IFC Files
+      summary: Update a specific IFC file
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Sample_IFC_File.ifc
+                description: This is a sample IFC file.
+      parameters:
+        - name: ifcFileId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - IFC Files
+      summary: Delete a specific IFC file
+      parameters:
+        - name: ifcFileId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //ifc-files/{ifcFileId}/schemas/{ifcFileSchema}:
+    get:
+      tags:
+        - IFC Files
+      summary: Get a specific IFC file on schema
+      parameters:
+        - name: ifcFileId
+          in: path
+          schema:
+            type: string
+          required: true
+        - name: ifcFileSchema
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //ifc-files/{ifcFileId}/last:
+    get:
+      tags:
+        - IFC Files
+      summary: Get the last IFC file
+      parameters:
+        - name: ifcFileId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //projects/{projectId}/data:
+    get:
+      tags:
+        - Project Data
+      summary: Get all project data for a project
+      parameters:
+        - name: projectId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Project Data
+      summary: Create a project data for a project
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                content:
+                  - name: Project-SEP
+                    description: Sepia Field Interconnection
+                    type: IfcProject
+                    IfcRelAggregates:
+                      - SEP
+                  - name: SEP
+                    description: Sepia oil Field
+                    type: IfcSite
+                    IfcRelAggregates: []
+                type: ifc-core-data
+      parameters:
+        - name: projectId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //projects/{projectId}/data/stats:
+    get:
+      tags:
+        - Project Data
+      summary: Get all project data stats for a project
+      parameters:
+        - name: projectId
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //project-data/{projectData}:
+    get:
+      tags:
+        - Project Data
+      summary: Get a specific project data
+      parameters:
+        - name: projectData
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - Project Data
+      summary: Update a specific project data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                content:
+                  - name: Project-SEP
+                    description: Sepia Field Interconnection
+                    type: IfcProject
+                    IfcRelAggregates:
+                      - SEP
+                  - name: SEP
+                    description: Sepia oil Field
+                    type: IfcSite
+                    IfcRelAggregates:
+                      - FPCRC
+                  - name: FPCRC
+                    description: FP Carioca
+                    type: IfcMarineFacility
+                    IfcRelAggregates: []
+      parameters:
+        - name: projectData
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Project Data
+      summary: Delete a specific project data
+      parameters:
+        - name: projectData
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //project-data/{projectData}/last:
+    get:
+      tags:
+        - Project Data
+      summary: Get the last project data
+      parameters:
+        - name: projectData
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //project-data/{projectData}/objects/{objectName}:
+    get:
+      tags:
+        - Project Data
+      summary: Get a specific project data object
+      parameters:
+        - name: projectData
+          in: path
+          schema:
+            type: string
+          required: true
+        - name: objectName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    patch:
+      tags:
+        - Project Data
+      summary: Update a specific project data object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                content:
+                  - description: FP Carioca da Gema
+      parameters:
+        - name: projectData
+          in: path
+          schema:
+            type: string
+          required: true
+        - name: objectName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Project Data
+      summary: Delete a specific project data object
+      parameters:
+        - name: projectData
+          in: path
+          schema:
+            type: string
+          required: true
+        - name: objectName
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //project-data/{projectData}/ifc-files/last:
+    get:
+      tags:
+        - Project Data
+      summary: Get the last IFC file for a project data
+      parameters:
+        - name: projectData
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  //iproject-data/{projectData}/ifc-files/schemas/{ifcFileSchema}:
+    get:
+      tags:
+        - Project Data
+      summary: Get a specific IFC file for a project data on schema
+      parameters:
+        - name: projectData
+          in: path
+          schema:
+            type: string
+          required: true
+        - name: ifcFileSchema
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
